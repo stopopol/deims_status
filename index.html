@@ -114,7 +114,7 @@
 					var x2js = new X2JS();
 					var jsonObj = x2js.xml2json(doc);
 					var first_record_date = jsonObj["GetRecordsResponse"]["SearchResults"]["Record"][0]["modified"]["__text"];
-					var update_date_text = " <small><small><small>(Latest update: " + first_record_date + ")</small></small></small>";
+					var update_date_text = " <small><small><small>(Latest update: " + first_record_date + ") CE(S)T</small></small></small>";
 					var number_of_records_in_csw = jsonObj["GetRecordsResponse"]["SearchResults"]["_numberOfRecordsMatched"];
 					$("#deims-pycsw-notes").html(number_of_records_in_csw + " records available" + update_date_text);
 				}
@@ -167,3 +167,4 @@
 		window.setInterval(function(){ping_components();}, 120000);
 		
 	</script>
+
